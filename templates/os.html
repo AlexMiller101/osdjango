@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>MyOS</title>
+{% load static %}    
+    <link rel="stylesheet" href="{% static 'css/indexos.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <h1 class="top-header">Welcome to my OS</h1>
+
+    <div class="windows">
+        <div class="taskbar">
+            <span id="timeshower">00:00</span>
+
+            <span id="newFolder" onclick="createFolder()"></span>
+        </div>
+
+        <div class="area" id="area">
+            <div class="folder" onclick="openFolder(1)">
+                <span class="folder-img"><img src="{% static 'css/folder-button.svg' %}" alt=""></span>
+                <span class="folder-name">My Folder</span>
+            </div>
+
+            <div class="folder" onclick="openFolder(2)">
+                <span class="folder-img"><img src="{% static 'css/folder-button.svg' %}" alt=""></span>
+                <span class="folder-name">My Images</span>
+            </div>
+
+            <div class="folder" onclick="openFolder(3)">
+                <span class="folder-img"><img src="{% static 'css/folder-button.svg' %}" alt=""></span>
+                <span class="folder-name">My Videos</span>
+            </div>
+        </div>
+    </div>
+
+   <script src="{% static 'js/indexsc.js' %}"></script> 
+</body>
+</html>
